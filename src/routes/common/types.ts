@@ -1,6 +1,5 @@
 import { Response, Request } from 'express';
 
-
 // **** Express **** //
 
 type TObj = Record<string, unknown>;

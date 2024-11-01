@@ -1,18 +1,13 @@
 import { ValidationErr } from '@src/common/classes';
 
-
 type TReqObj = Record<string, unknown>;
-
 
 /**
  * Check that param/s is a string
  */
 function isStr(reqObj: TReqObj, params: string): string;
 function isStr(reqObj: TReqObj, params: readonly string[]): string[];
-function isStr(
-  reqObj: TReqObj,
-  params: string | readonly string[],
-): string | string[] {
+function isStr(reqObj: TReqObj, params: string | readonly string[]): string | string[] {
   return _checkWrapper(reqObj, params, _checkStr);
 }
 
@@ -32,10 +27,7 @@ function _checkStr(val: unknown): string | undefined {
  */
 function isNum(reqObj: TReqObj, params: string): number;
 function isNum(reqObj: TReqObj, params: readonly string[]): number[];
-function isNum(
-  reqObj: TReqObj,
-  params: string | readonly string[],
-): number | number[] {
+function isNum(reqObj: TReqObj, params: string | readonly string[]): number | number[] {
   return _checkWrapper(reqObj, params, _checkNum);
 }
 
@@ -56,10 +48,7 @@ function _checkNum(val: unknown): number | undefined {
  */
 function isBool(reqObj: TReqObj, params: string): boolean;
 function isBool(reqObj: TReqObj, params: readonly string[]): boolean[];
-function isBool(
-  reqObj: TReqObj,
-  params: string | readonly string[],
-): boolean | boolean[] {
+function isBool(reqObj: TReqObj, params: string | readonly string[]): boolean | boolean[] {
   return _checkWrapper(reqObj, params, _checkBool);
 }
 
@@ -99,7 +88,6 @@ function isValid<T>(
   }
 }
 
-
 // **** Shared Helpers **** //
 
 /**
@@ -131,7 +119,6 @@ function _checkWrapper<T>(
   // Throw error
   throw new ValidationErr(params);
 }
-
 
 // **** Export Default **** //
 

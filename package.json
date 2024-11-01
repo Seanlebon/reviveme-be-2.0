@@ -10,7 +10,9 @@
     "start": "NODE_ENV=production node -r ./preload.js ./dist",
     "test": "NODE_ENV=test npx ts-node ./spec",
     "test:hot": "nodemon --exec \"npm run test\" --watch ./src --watch ./spec -e ts",
-    "watch": "watch 'npm run build' ./src"
+    "watch": "watch 'npm run build' ./src",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "format": "prettier . --write"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -27,6 +29,7 @@
     "jsonfile": "^6.1.0",
     "module-alias": "^2.2.3",
     "moment": "^2.30.1",
+    "mongodb": "^6.10.0",
     "morgan": "^1.10.0",
     "watch": "^1.0.2"
   },
@@ -43,12 +46,18 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.8.1",
     "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
     "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-n": "^17.11.1",
+    "eslint-plugin-prettier": "^5.2.1",
     "find": "^0.3.0",
     "fs-extra": "^11.2.0",
     "jasmine": "^5.4.0",
     "nodemon": "^3.1.7",
+    "onchange": "^7.1.0",
+    "prettier": "^3.3.3",
     "supertest": "^7.0.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
