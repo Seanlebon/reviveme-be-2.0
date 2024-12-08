@@ -3,7 +3,6 @@ import Jasmine from 'jasmine';
 import logger from 'jet-logger';
 import { argv } from 'process';
 
-
 // Init Jasmine
 const jasmine = new Jasmine();
 jasmine.exitOnCompletion = false;
@@ -12,9 +11,7 @@ jasmine.exitOnCompletion = false;
 jasmine.loadConfig({
   random: true,
   spec_dir: 'spec',
-  spec_files: [
-    './tests/**/*.spec.ts',
-  ],
+  spec_files: ['./tests/**/*.spec.ts'],
   stopSpecOnExpectationFailure: false,
 });
 

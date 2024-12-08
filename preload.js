@@ -4,9 +4,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const moduleAlias = require('module-alias');
 
-
 // Check the env
-const NODE_ENV = (process.env.NODE_ENV || 'development');
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Configure "dotenv"
 const result2 = dotenv.config({
@@ -20,4 +19,3 @@ if (result2.error) {
 if (NODE_ENV === 'production') {
   moduleAlias.addAlias('@src', __dirname + '/dist');
 }
-

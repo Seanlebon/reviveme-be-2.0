@@ -1,6 +1,11 @@
-import { Request, Response} from 'express';
+// External Dependencies
 
-export function viewTournament (req: Request,res: Response) {
-  res.send('This is a tournament');
-}
+// Global Config
 
+// GET
+
+// POST
+
+// PUT
+
+// DELETE
